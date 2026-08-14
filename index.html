@@ -930,12 +930,29 @@ body { background: #0a0a0a; color: #e8e0d0; font-family: 'Lato', sans-serif; }
   .body-text { font-size: 0.88rem; }
 }
 
+/* iPhone 13 and similar devices (390px x 844px) */
+@media (max-width: 428px) and (min-height: 700px) {
+  section.capa-section {
+    overflow: visible !important;
+  }
+  div.capa-section-inner {
+    height: auto !important;
+    min-height: 100dvh !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  /* Make sure content isn't cut */
+  .capa-content {
+    padding-bottom: 4rem !important;
+  }
+}
+
 
 </style>
 </head>
 <body>
-<section class="ebook-section" style="page-break-after: always; padding: 0; margin: 0; overflow: hidden;">
-<div style="
+<section class="ebook-section capa-section" style="page-break-after: always; padding: 0; margin: 0; overflow: hidden;">
+<div class="capa-section-inner" style="
   position: relative;
   width: 100%;
   height: 100vh;
